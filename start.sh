@@ -307,10 +307,10 @@ cd heroku-icecast
 ls -1 music/*.mp3 > playlist.rock.txt
 cp music/*.mp3 /app/.apt/usr/share/icecast2/web
 
-cp ices.xml  /app/.apt/usr/share/ices/
-cp music/playlist.rock.txt /app/.apt/usr/share/icecast2/web
+sudo cp ices.xml  /app/.apt/usr/share/ices/
+sudo cp music/playlist.rock.txt /app/.apt/usr/share/icecast2/web
 
 cd ..
 icecast2 -c icecast.xml
 ices -c /app/.apt/usr/share/ices/ices.xml
-
+sudo mkdir soheil
