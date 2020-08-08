@@ -67,8 +67,9 @@ cat<<-KqwBMvDZZT5ruPTlWSY0I6wX0A5MSv>icecast.xml
     <!-- You may have multiple <listener> elements -->
     <listen-socket>
         <port>$PORT</port>
+        <bind-address>0.0.0.0<\/bind-address>
         <!-- <bind-address>127.0.0.1</bind-address> -->
-        <!-- <shoutcast-mount>/stream</shoutcast-mount> -->
+       <shoutcast-mount>/stream</shoutcast-mount> 
     </listen-socket>
     <!--
     <listen-socket>
@@ -130,6 +131,17 @@ cat<<-KqwBMvDZZT5ruPTlWSY0I6wX0A5MSv>icecast.xml
 
     <!-- Default settings for all mounts that don't have a specific <mount type="normal">.
     -->
+    
+<mount type="normal">
+   <mount-name>/live</mount-name>
+   <username>admin</username>
+   <password>hackme</password>
+   <stream-name>live</stream-name>
+   <stream-description>it is for live streaming from your home or workplace</stream-description>
+   <stream-url:>0.0.0.0</stream-url>
+    <!--<genre>gnre</genre>-->
+   <bitrate>96</bitrate>
+</mount> 
     <!--
     <mount type="default">
         <public>0</public>
@@ -244,5 +256,5 @@ cat<<-KqwBMvDZZT5ruPTlWSY0I6wX0A5MSv>icecast.xml
     </security>
 </icecast>
 KqwBMvDZZT5ruPTlWSY0I6wX0A5MSv
-
+wget 
 icecast2 -c icecast.xml
