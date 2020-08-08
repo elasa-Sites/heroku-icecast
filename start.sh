@@ -259,7 +259,7 @@ KqwBMvDZZT5ruPTlWSY0I6wX0A5MSv
 wget 
 
 
-cat<<-KqwBMvDZZT5ruPTlWSY0I6wX0A5MSv>ices.xml 
+cat <<EOT >> ices.xml 
 
 <?xml version="1.0"?>
 <ices:Configuration xmlns:ices="http://www.icecast.org/projects/ices">
@@ -296,8 +296,8 @@ cat<<-KqwBMvDZZT5ruPTlWSY0I6wX0A5MSv>ices.xml
 </Stream>
 </ices:Configuration>
 
-KqwBMvDZZT5ruPTlWSY0I6wX0A5MSv
-wget
+EOT
+
 
 mkdir /etc/ices/live
 git clone  https://github.com/elasa-Sites/heroku-icecast.git
@@ -307,10 +307,10 @@ cd heroku-icecast
 ls -1 music/*.mp3 > playlist.rock.txt
 cp music/*.mp3 /app/.apt/usr/share/icecast2/web
 
-
+cp ices.xml  /app/.apt/usr/share/ices/
 cp music/playlist.rock.txt /app/.apt/usr/share/ices/
 
 cd ..
 icecast2 -c icecast.xml
-ices -c ices.xml
+ices -c /app/.apt/usr/share/ices/ices.xml
 
