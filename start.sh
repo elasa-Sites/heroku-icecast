@@ -257,4 +257,55 @@ cat<<-KqwBMvDZZT5ruPTlWSY0I6wX0A5MSv>icecast.xml
 </icecast>
 KqwBMvDZZT5ruPTlWSY0I6wX0A5MSv
 wget 
+
+
+cat<<-KqwBMvDZZT5ruPTlWSY0I6wX0A5MSv>ices.xml 
+
+<?xml version="1.0"?>
+<ices:Configuration xmlns:ices="http://www.icecast.org/projects/ices">
+<Playlist>
+  <File>/app/.apt/etc/ices/playlist.rock.txt</File>
+  <Randomize>1</Randomize>
+  <Type>builtin</Type>
+  <Module>ices</Module>
+</Playlist>
+<Execution>
+  <Background>1</Background>
+  <Verbose>0</Verbose>
+  <BaseDirectory>/app/.apt/etc/ices</BaseDirectory>
+</Execution>
+
+<Stream>
+  <Server>
+        <Hostname>0.0.0.0</Hostname>
+        <Port>$PORT</Port>
+        <Password>hackme</Password>
+        <Protocol>http</Protocol>
+  </Server>
+
+  <Mountpoint>/rock</Mountpoint>
+  <Dumpfile>ices.dump</Dumpfile>
+  <Name>Default stream</Name>
+  <Genre>Default genre</Genre>
+  <Description>Default description</Description>
+  <!-- <URL>http://192.168.0.15:8000</URL> -->
+  <Public>0</Public>
+  <Bitrate>128</Bitrate>
+  <Reencode>0</Reencode>
+  <Channels>2</Channels>
+</Stream>
+</ices:Configuration>
+
+KqwBMvDZZT5ruPTlWSY0I6wX0A5MSv
+
+mkdir /etc/ices/live
+git clone  https://github.com/elasa-Sites/heroku-icecast.git
+
+cd heroku-icecast
+
+cp music/*.mp3 /app/.apt/etc/icecast2/web
+cp music/playlist.rock.txt  /app/.apt/etc/ices/ 
+cd ..
 icecast2 -c icecast.xml
+ices -c ices.xml
+
