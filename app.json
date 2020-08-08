@@ -43,7 +43,7 @@
   		},
   		"PORT": {
   			"description": "The server's port.",
-  			"value": "1989"
+  			"value": "8000"
   		}
   	}
 }
