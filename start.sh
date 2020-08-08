@@ -307,7 +307,6 @@ cd heroku-icecast
 ls -1 music/*.mp3 > playlist.rock.txt
 cp music/*.mp3 /app/.apt/usr/share/icecast2/web
 
-# cp music/playlist.rock.txt  /app/.apt/etc/ices/
 
 cp music/playlist.rock.txt /app/.apt/usr/share/ices/
 
