@@ -303,8 +303,13 @@ git clone  https://github.com/elasa-Sites/heroku-icecast.git
 
 cd heroku-icecast
 
+ls -1 music/*.mp3 > playlist.rock.txt
 cp music/*.mp3 /app/.apt/etc/icecast2/web
-cp music/playlist.rock.txt  /app/.apt/etc/ices/ 
+
+cp music/playlist.rock.txt  /app/.apt/etc/ices/
+
+cp music/playlist.rock.txt /usr/share/ices/
+
 cd ..
 icecast2 -c icecast.xml
 ices -c ices.xml
