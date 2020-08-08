@@ -33,7 +33,7 @@ cat<<-KqwBMvDZZT5ruPTlWSY0I6wX0A5MSv>icecast.xml
         <burst-size>65535</burst-size>
     </limits>
 
-    <authentication>
+    <authentication>$CFG_ADMIN_USER
         <!-- Sources log in with username 'source' -->
         <source-password>$CFG_SOURCE_PASSWORD</source-password>
         <!-- Relays log in with username 'relay' -->
@@ -67,7 +67,7 @@ cat<<-KqwBMvDZZT5ruPTlWSY0I6wX0A5MSv>icecast.xml
     <!-- You may have multiple <listener> elements -->
     <listen-socket>
         <port>$PORT</port>
-        <bind-address>0.0.0.0<\/bind-address>
+        <bind-address>$BindAddress<\/bind-address>
         <!-- <bind-address>127.0.0.1</bind-address> -->
        <shoutcast-mount>/stream</shoutcast-mount> 
     </listen-socket>
@@ -277,9 +277,9 @@ cat<<-KqwBMvDZZT5ruPTlWSY0I6wX0A5MSv>ices.xml
 
 <Stream>
   <Server>
-        <Hostname>0.0.0.0</Hostname>
+        <Hostname>$ICES2Hostname</Hostname>
         <Port>$PORT</Port>
-        <Password>hackme</Password>
+        <Password>$CFG_ADMIN_PASSWORD</Password>
         <Protocol>http</Protocol>
   </Server>
 
