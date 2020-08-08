@@ -8,15 +8,16 @@
   		}
 	],
 	"env": {
-		
 		"BindAddress": {
   			"description": "The icecast.xml <bind-address>$BindAddress<\/bind-address> .",
   			"value": "0.0.0.0"
   		},
+		
   		"ICES2Hostname": {
   			"description": "The ices.xml  <Hostname>$ICES2Hostname</Hostname> .",
   			"value": "0.0.0.0"
   		},
+		
   		"CFG_LOCATION": {
   			"description": "The server's location.",
   			"value": "Earth"
@@ -47,3 +48,4 @@
   		}
   	}
 }
+
