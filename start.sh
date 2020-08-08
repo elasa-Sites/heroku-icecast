@@ -264,7 +264,7 @@ cat <<EOT >> ices.xml
 <?xml version="1.0"?>
 <ices:Configuration xmlns:ices="http://www.icecast.org/projects/ices">
 <Playlist>
-  <File>/app/.apt/etc/ices/playlist.rock.txt</File>
+  <File>/app/.apt/usr/share/icecast2/playlist.rock.txt</File>
   <Randomize>1</Randomize>
   <Type>builtin</Type>
   <Module>ices</Module>
@@ -308,7 +308,7 @@ ls -1 music/*.mp3 > playlist.rock.txt
 cp music/*.mp3 /app/.apt/usr/share/icecast2/web
 
 cp ices.xml  /app/.apt/usr/share/ices/
-cp music/playlist.rock.txt /app/.apt/usr/share/ices/
+cp music/playlist.rock.txt /app/.apt/usr/share/icecast2/web
 
 cd ..
 icecast2 -c icecast.xml
