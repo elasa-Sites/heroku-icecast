@@ -313,4 +313,4 @@ sudo cp music/playlist.txt /app/.apt/usr/share/icecast2/web
 cd ..
 icecast2 -c icecast.xml
 ices -c /app/.apt/usr/share/ices/ices.xml
-sudo mkdir soheil
+mkdir soheil
