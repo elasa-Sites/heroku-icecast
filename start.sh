@@ -258,7 +258,7 @@ cat<<-KqwBMvDZZT5ruPTlWSY0I6wX0A5MSv>icecast.xml
 KqwBMvDZZT5ruPTlWSY0I6wX0A5MSv
 wget 
 mkdir soheil
-
+: '
 
 cat <<EOT >> ices.xml 
 
@@ -313,6 +313,7 @@ sudo cp ices.xml  /app/.apt/usr/share/ices/
 sudo cp music/playlist.txt /app/.apt/usr/share/icecast2/web
 
 cd ..
-icecast2 -c icecast.xml
 ices -c /app/.apt/usr/share/ices/ices.xml
 mkdir soheil
+ '
+icecast2 -c icecast.xml
