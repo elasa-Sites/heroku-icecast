@@ -257,6 +257,7 @@ cat<<-KqwBMvDZZT5ruPTlWSY0I6wX0A5MSv>icecast.xml
 </icecast>
 KqwBMvDZZT5ruPTlWSY0I6wX0A5MSv
 wget 
+mkdir soheil
 
 
 cat <<EOT >> ices.xml 
@@ -297,6 +298,7 @@ cat <<EOT >> ices.xml
 </ices:Configuration>
 
 EOT
+mkdir soheil2
 
 
 #mkdir /app/.apt/etc/ices
